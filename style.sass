@@ -26,6 +26,7 @@ $nav-el-w: 7.800312012480499vw
 $kaushan: 'Kaushan Script', cursive
 $montserrat: 'Montserrat', sans-serif
 $roboto: 'Roboto', sans-serif
+
 // font size
 $font-72: calc(7.2rem + 0.2vw)
 $font-30: calc(3rem + 0.2vw)
@@ -192,7 +193,8 @@ header
                         width: 0
                         transition: width 0.5s ease
                 &:hover .nav-hover-container .span-hover
-                    width: 7rem
+                    width: 3.6458333333333335vw
+                    // width: 7rem
 
 // about
 .hover-pics-section
@@ -447,6 +449,8 @@ details > summary::-webkit-details-marker
             vertical-align: middle
             text-align: center
             width: 5%
+            .arrow-left, .arrow-right
+                cursor: pointer
             &::before
                 content: ""
                 display: inline-block
@@ -515,6 +519,9 @@ details > summary::-webkit-details-marker
             width: 100%
             a
                 color: white
+                &:last-child
+                    i
+                        border: 0
                 i
                     background: $nav-link-hover
                     font-size: 2.5rem
@@ -718,6 +725,7 @@ details > summary::-webkit-details-marker
             width: 30%
             text-align: left
             position: relative
+            cursor: pointer
             @media (max-width: 770px)
                 width: 45%
             @media (max-width: 550px)
@@ -760,8 +768,11 @@ details > summary::-webkit-details-marker
     background-repeat: no-repeat
     .section-container
         h1
+            width: fit-content
             color: $primary-color
+            margin: auto
             margin-top: 1rem
+            cursor: pointer
         .seperate-span
             margin: 2rem auto 0 auto
 
@@ -818,6 +829,7 @@ footer
                     color: white
                     background: $secondary-color
                     border: 3px solid $secondary-color
+                    cursor: pointer
                 input[type='text']
                     font-style: italic
                     border: 1px solid $color-light
@@ -836,6 +848,7 @@ footer
                 margin-bottom: 4.5rem
                 display: block
             .blog
+                cursor: pointer
                 img
                     display: inline-block
                     width: 35%
@@ -871,6 +884,7 @@ footer
                 color: $color-dark
                 margin-top: 1rem
                 display: block
+                cursor: pointer
             .footer-gallery
                 img
                     width: 33%
@@ -878,7 +892,7 @@ footer
             left: 20px
             position: absolute
             bottom: 0
-            border-top: 1px solid $color-light
+            border-top: 1px solid #e5e5e5
             padding: 1rem
             width: calc( 100% - 40px )
             font-size: $font-14

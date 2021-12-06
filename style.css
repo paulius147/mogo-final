@@ -247,7 +247,7 @@ header .header-container .header-bottom .outer-container .nav-hover-container .s
 }
 
 header .header-container .header-bottom .outer-container:hover .nav-hover-container .span-hover {
-  width: 7rem;
+  width: 3.6458333333333335vw;
 }
 
 .hover-pics-section .hover-img .image {
@@ -634,6 +634,10 @@ details > summary::-webkit-details-marker {
   width: 5%;
 }
 
+.full-width-comments .container div .arrow-left, .full-width-comments .container div .arrow-right {
+  cursor: pointer;
+}
+
 .full-width-comments .container div::before {
   content: "";
   display: inline-block;
@@ -736,6 +740,10 @@ details > summary::-webkit-details-marker {
 
 #team .image .img-hover-div a {
   color: white;
+}
+
+#team .image .img-hover-div a:last-child i {
+  border: 0;
 }
 
 #team .image .img-hover-div a i {
@@ -1048,6 +1056,7 @@ details > summary::-webkit-details-marker {
   width: 30%;
   text-align: left;
   position: relative;
+  cursor: pointer;
 }
 
 @media (max-width: 770px) {
@@ -1110,8 +1119,13 @@ details > summary::-webkit-details-marker {
 }
 
 #map .section-container h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #f38181;
+  margin: auto;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 #map .section-container .seperate-span {
@@ -1197,6 +1211,7 @@ footer .section-container .footer-left form input[type='submit'] {
   color: white;
   background: #95e1d3;
   border: 3px solid #95e1d3;
+  cursor: pointer;
 }
 
 footer .section-container .footer-left form input[type='text'] {
@@ -1223,6 +1238,10 @@ footer .section-container .footer-middle .footer-title {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 4.5rem;
   display: block;
+}
+
+footer .section-container .footer-middle .blog {
+  cursor: pointer;
 }
 
 footer .section-container .footer-middle .blog img {
@@ -1274,6 +1293,7 @@ footer .section-container .footer-right i {
   color: #333333;
   margin-top: 1rem;
   display: block;
+  cursor: pointer;
 }
 
 footer .section-container .footer-right .footer-gallery img {
@@ -1284,7 +1304,7 @@ footer .section-container .footer-bottom {
   left: 20px;
   position: absolute;
   bottom: 0;
-  border-top: 1px solid #999999;
+  border-top: 1px solid #e5e5e5;
   padding: 1rem;
   width: calc( 100% - 40px);
   font-size: calc(1.4rem + 0.2vw);
