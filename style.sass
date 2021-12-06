@@ -1,0 +1,901 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&family=Roboto&display=swap')
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    line-height: 1
+
+html
+    font-size: 62.5%
+    scroll-behavior: smooth
+
+body
+    overflow-x: hidden
+
+// variables
+
+// width
+// $max-w: 62.5vw
+$max-w: 120rem
+$bottom-nav-el-w: 14.583333333333334vw
+$seperate-w: calc(5rem + 4vw)
+$nav-el-w: 7.800312012480499vw
+
+// font
+$kaushan: 'Kaushan Script', cursive
+$montserrat: 'Montserrat', sans-serif
+$roboto: 'Roboto', sans-serif
+// font size
+$font-72: calc(7.2rem + 0.2vw)
+$font-30: calc(3rem + 0.2vw)
+$font-24: calc(2.4rem + 0.2vw)
+$font-18: calc(1.8rem + 0.1vw)
+$font-15: calc(1.5rem + 0.2vw)
+$font-14: calc(1.4rem + 0.2vw)
+
+// colors
+$color-white: white
+$color-dark: #333333
+$color-light: #999999
+$primary-color: #f38181
+$secondary-color: #95e1d3
+$nav-link-hover: #fce38a
+
+.container
+    max-width: $max-w
+    margin: auto
+    padding: 5rem 0
+
+.section-container
+    padding: 7rem 2rem
+    margin: auto
+    text-align: center
+    max-width: $max-w
+    p
+        font-size: $font-24
+        font-family: $kaushan
+        margin-bottom: 2.4rem
+    span
+        line-height: 1.5
+    h1
+        font-size: $font-30
+        font-family: $montserrat
+    .desc
+        color: $color-light
+        font-family: $roboto
+        font-size: $font-15
+        display: block
+        margin-bottom: 7rem
+
+.seperate-span
+    width: $seperate-w
+    height: 3px
+    display: block
+    background-color: $primary-color
+    margin: 5rem auto
+
+// header
+header
+    background: url('../images/header-background.jpg')
+    background-position: center
+    background-size: cover
+    height: 100vh
+    .header-container
+        position: relative
+        height: 100%
+        max-width: $max-w
+        margin: auto
+        color: $color-white
+        font-family: $montserrat
+        padding: 0 1rem
+        padding-top: 1rem
+        nav
+            text-align: justify
+            @media (max-width: 540px)
+                text-align: center
+                h1
+                    margin-bottom: 1rem
+                a
+                    margin-right: 1vw
+            &::after
+                content: ''
+                display: inline-block
+                width: 100%
+            .nav-list
+                display: inline-block
+            .nav-title
+                display: inline-block
+                @media (max-width: 540px)
+                    display: block
+                h1
+                    font-size: $font-30
+        a
+            color: $color-white
+            text-decoration: none
+            margin-right: 2vw
+            font-size: $font-14
+            img
+                width: calc(14px + 0.5vw)
+            &:last-child
+                margin-right: 0
+            &:hover
+                color: $nav-link-hover
+                padding-bottom: 0.5rem
+                border-bottom: 3px solid $nav-link-hover
+        img
+            cursor: pointer
+        .header-center
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            text-align: center
+            .seperate-span
+                margin: 3rem auto
+            span
+                background: white
+            p
+                font-size: 5.732484076433121vw
+                font-family: $kaushan
+                margin-bottom: 2rem
+            h1
+                font-weight: bold
+                font-size: 7.8125vw
+            button
+                padding: 1rem 2rem
+                background: transparent
+                border: 3px solid white
+                color: white
+                font-weight: bold
+                font-size: $font-14
+                cursor: pointer
+        .header-bottom
+            width: 100%
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translate(-50%, -50%)
+            font-size: 0
+            padding: 0 1rem
+            .outer-container
+                display: inline-block
+                width: 23%
+                cursor: pointer
+                margin: 0 1%
+                border-top: 3px solid white
+                b
+                    font-size: $font-24
+                    margin-right: 1rem
+                    @media (max-width: 670px)
+                        display: block
+                span
+                    font-size: $font-18
+                    @media (max-width: 670px)
+                        font-size: 1.2rem
+                .nav-hover-container
+                    width: 100%
+                    margin-bottom: 2.5rem
+                    position: relative
+                    .bottom-nav-el
+                        margin: auto
+                        display: block
+                        width: $bottom-nav-el-w
+                        height: 0.3rem
+                        background: #e6e6e6
+                    .span-hover
+                        background: $primary-color
+                        height: 3px
+                        position: absolute
+                        left: 0
+                        top: -3px
+                        width: 0
+                        transition: width 0.5s ease
+                &:hover .nav-hover-container .span-hover
+                    width: 7rem
+
+// about
+.hover-pics-section
+    .hover-img
+        .image
+            position: relative
+            display: inline-block
+            cursor: pointer
+            &:hover
+                box-shadow: 0px 0px 400px 200px rgba(243,129,129,0.7) inset, 10px 10px 0px 0px rgba(149,225,211,1)
+            &:hover .img-hover-span
+                opacity: 1
+            .img-hover-span
+                position: absolute
+                color: white
+                top: 50%
+                transform: translate(-50%, -50%)
+                opacity: 0
+                transition: opacity 0.5s ease
+                span
+                    display: block
+                    margin-top: 1rem
+                    font-size: $font-18
+                    font-weight: bold
+                    font-family: $montserrat
+        .img-about-1, .img-about-2, .img-about-3
+            width: 32%
+            min-width: 20rem
+            height: calc(25rem + 0.5vw)
+            margin-bottom: 2rem
+            @media (min-width: 1900px)
+                height: calc(30rem + 1vw)
+            @media (max-width: 440px)
+                width: 100%
+        .img-about-1
+            background: url("../images/about-1.jpg")
+            background-size: cover
+            background-repeat: no-repeat
+            margin-right: 2rem
+            @media (max-width: 443px)
+                margin-right: 0
+        .img-about-2
+            background: url("../images/about-2.jpg")
+            background-size: cover
+            background-repeat: no-repeat
+            margin-right: 2rem
+            @media (max-width: 670px)
+                margin-right: 0
+        .img-about-3
+            background: url("../images/about-3.jpg")
+            background-size: cover
+            background-repeat: no-repeat
+            @media (max-width: 670px)
+                margin-right: 0
+
+// full width section
+.full-width-counter
+    background-color: $secondary-color
+    .container
+        padding: 0
+        font-size: 0
+        .outer
+            vertical-align: top
+            padding: 5rem 0.1rem
+            display: inline-block
+            width: 20%
+            text-align: center
+            color: white
+            font-family: $montserrat
+            border-right: 1px solid #e4e4e4
+            height: 100%
+            &::before
+                content: ""
+                display: inline-block
+                vertical-align: middle
+                height: 25%
+            .inner
+                h1
+                    font-size: calc(5.8rem + 0.5vw)
+                    margin-bottom: 1rem
+                p
+                    font-size: $font-14
+                @media (max-width: 700px)
+                    h1
+                        font-size: $font-24
+                    p
+                        font-size: 1rem
+        .last
+            border-right: 0
+
+.full-width-content
+    .bottom-row
+        border-top: 1px solid $color-light
+        padding-top: 3rem
+    .content-row
+        font-size: 0
+        .content
+            display: inline-block
+            width: 32%
+            img
+                display: inline-block
+                vertical-align: top
+                width: 7%
+                margin-right: 5%
+            @media (max-width: 550px)
+                display: block
+                width: 100%
+                img
+                    margin-right: 0
+                    margin-bottom: 1rem
+            div
+                display: inline-block
+                width: 88%
+                text-align: left
+                @media (max-width: 550px)
+                    display: block
+                    text-align: center
+                    width: 100%
+                h1
+                    font-size: $font-14
+                    font-family: $montserrat
+                    margin-bottom: 1rem
+                p
+                    font-size: $font-15
+                    font-family: $roboto
+                    color: $color-light
+                    line-height: 1.5
+        .content-middle
+            margin: 0 1rem
+            @media (max-width: 550px)
+                margin: 0
+
+#design
+    background: url('../images/design-bg.jpg')
+    background-position: center
+    background-size: cover
+    position: relative
+    height: 95vh
+    @media (min-height: 1000px)
+        height: 70vh
+    .section-container
+        height: 100%
+        img
+            width: calc(23rem + 3vw)
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translate(-50%, 0)
+        .mobile
+            width: calc(13rem + 3vw)
+            left: 58%
+            bottom: -5rem
+        @media (min-width: 1000px)
+            img
+                width: calc(23rem + 3vw)
+        @media (min-height: 700px)
+            img
+                width: calc(23rem + 10vw)
+
+// service
+#service
+    .section-container
+        div
+            font-size: 0
+            .service-img
+                display: inline-block
+                width: 47%
+                margin-right: 3%
+            .details-container
+                display: inline-block
+                width: 50%
+                vertical-align: top
+                details
+                    border: 1px solid $color-light
+                    margin-bottom: 1rem
+                    .faq-line
+                        background: $color-light
+                        width: 100%
+                        height: 1px
+                        display: block
+                    .faq-content
+                        padding: 1rem
+                        margin-top: 1rem
+                        margin-bottom: 1rem
+                        overflow: scroll
+                        max-height: 100px
+                        overflow-x: auto
+                    summary
+                        font-size: $font-14
+                        font-family: $montserrat
+                        padding: 1rem
+                        text-align: left
+                        cursor: pointer
+                        position: relative
+                        list-style: none
+                        .summary-icon
+                            width: 25px
+                            vertical-align: middle
+                            margin-right: 1rem
+                        span
+                            vertical-align: middle
+                    i
+                        font-size: $font-15
+                        font-family: $roboto
+                        color: $color-light
+                        display: inline-block
+                        text-align: left
+                        line-height: 1.5
+            @media (max-width: 800px)
+                .service-img
+                    width: 100%
+                    margin-right: 0
+                .details-container
+                    width: 100%
+                    margin-top: 1rem
+
+details > summary::after
+    position: absolute
+    content: '+'
+    right: 20px
+
+details[open] > summary::after
+    position: absolute
+    content: "-"
+    right: 20px
+
+details > summary::-webkit-details-marker
+    display: none
+
+::-webkit-scrollbar
+    width: 5px
+
+::-webkit-scrollbar-track
+    box-shadow: inset 0 0 5px #d4d4d4
+    border-radius: 10px
+
+::-webkit-scrollbar-thumb
+    background: $secondary-color
+
+// comments
+.full-width-comments
+    background: #f8f8f8
+    .container
+        font-size: 0
+        &::before
+            content: ""
+            display: inline-block
+            vertical-align: middle
+            height: 100%
+        div
+            display: inline-block
+            vertical-align: middle
+            text-align: center
+            width: 5%
+            &::before
+                content: ""
+                display: inline-block
+                vertical-align: middle
+                height: 100%
+        .comment-content
+            width: 90%
+            .comment-text
+                width: 70%
+                text-align: left
+                .comment
+                    font-size: $font-24
+                    color: $color-light
+                    font-family: $roboto
+                .author-container
+                    display: block
+                    width: 100%
+                    text-align: left
+                    margin-top: 2rem
+                    .author
+                        font-size: $font-24
+                        display: inline-block
+                        font-family: $kaushan
+                        vertical-align: middle
+                    .author-line
+                        display: inline-block
+                        margin-right: 2rem
+                        width: 5vw
+            .comment-icon
+                display: inline-block
+                vertical-align: middle
+                margin-right: 3rem
+                @media (max-width: 672px)
+                    display: block
+                    margin: auto
+                    margin-bottom: 1rem
+.comment-pic
+    width: 30%
+    display: inline-block
+    vertical-align: middle
+    @media (max-width: 672px)
+        display: block
+        margin: auto
+        margin-bottom: 1rem
+        width: 50%
+
+// team
+#team
+    .image
+        position: relative
+        display: inline-block
+        cursor: pointer
+        &:hover
+            box-shadow: 0px 0px 400px 200px rgba(243,129,129,0.7) inset, 10px 10px 0px 0px rgba(149,225,211,1)
+        &:hover .img-hover-div
+            opacity: 1
+        .img-hover-div
+            position: absolute
+            color: white
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: opacity 0.5s ease
+            font-size: 0
+            width: 100%
+            a
+                color: white
+                i
+                    background: $nav-link-hover
+                    font-size: 2.5rem
+                    padding: 1rem
+                    width: 5rem
+                    border-right: 1px solid $primary-color
+                    &:hover
+                        background: $primary-color
+        .team-desc
+            position: absolute
+            bottom: -10rem
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            b
+                display: block
+                margin-bottom: 2rem
+                color: $color-dark
+                font-family: $montserrat
+                font-size: $font-14
+            i
+                display: block
+                font-family: $roboto
+                font-size: $font-15
+                color: $color-light
+    .img-team-1
+        background: url("../images/team-1.jpg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        width: 31%
+        height: 470px
+    .img-team-2
+        background: url("../images/team-2.jpg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        width: 31%
+        height: 470px
+        margin: 0 3%
+        // margin: 0 3rem
+    .img-team-3
+        background: url("../images/team-3.jpg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        width: 31%
+        height: 470px
+    @media (max-width: 970px)
+        .img-team-3
+            display: block
+            margin: auto
+            width: 40%
+        .img-team-1, .img-team-2
+            margin-bottom: 10rem
+            width: 40%
+    @media (max-width: 600px)
+        .img-team-1, .img-team-2, .img-team-3
+            width: 90%
+            margin: auto
+            margin-bottom: 10rem
+        .img-team-3
+            margin-bottom: 0
+
+// logos
+.full-width-logos
+    margin-top: 7rem
+    background: #f8f8f8
+    .container
+        img
+            width: 100%
+
+// work
+#work
+    .desc
+        margin: 0
+
+// work examples
+.full-width-work
+    font-size: 0
+    .two-img, .one-img
+        width: 25%
+        display: inline-block
+        .image
+            position: relative
+            display: inline-block
+            cursor: pointer
+            &:hover
+                box-shadow: 0px 0px 400px 200px rgba(243,129,129,0.7) inset
+            &:hover .inner-hover
+                opacity: 1
+            .inner-hover
+                position: absolute
+                color: white
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                opacity: 0
+                transition: opacity 0.5s ease
+                text-align: center
+                span
+                    font-size: $font-14
+                    font-family: $montserrat
+                    display: block
+                    margin: 2rem
+                .design-desc
+                    font-family: $roboto
+                    font-size: $font-15
+                    display: block
+                i
+                    font-size: 3rem
+        .design-img-1
+            background: url('../images/work-1.jpg')
+        .design-img-5
+            background: url('../images/work-5.jpg')
+        .design-img-2
+            background: url('../images/work-2.jpg')
+        .design-img-6
+            background: url('../images/work-6.jpg')
+        .design-img-4
+            background: url('../images/work-4.jpg')
+        .design-img-7
+            background: url('../images/work-7.jpg')
+        .design-img-1, .design-img-5, .design-img-2, .design-img-6, .design-img-4, .design-img-7
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            height: 19.270833333333332vw
+            width: 100%
+            @media (max-width: 750px)
+                height: 50vw
+    .one-img
+        width: 25%
+        display: inline-block
+        .design-img-3
+            background: url('../images/work-3.jpg')
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat
+            height: 38.541666666666664vw
+            width: 100%
+            @media (max-width: 750px)
+                height: 100vw
+        img
+            width: 100%
+            max-height: 770px
+    @media (max-width: 750px)
+        .one-img
+            width: 50%
+        .two-img
+            width: 50%
+
+// people
+#people
+    background: url('../images/people-bg.jpg')
+    background-position: center
+    background-size: cover
+    .section-container
+        .bottom-row
+            border-top: 0
+        .content-row
+            .content
+                vertical-align: top
+                width: 50%
+                @media (max-width: 650px)
+                    display: block
+                    width: 100%
+                div
+                    width: 70%
+                    .seperate-span
+                        margin: 1.5rem 0
+                        width: 7rem
+                    i
+                        font-size: $font-15
+                        font-family: $roboto
+                        color: $color-dark
+                    @media (max-width: 550px)
+                        width: 100%
+                        .seperate-span
+                            margin: 1.5rem auto
+                img
+                    width: 20%
+                    margin: 0
+                    margin-right: 5%
+                    @media (max-width: 550px)
+                        margin: auto
+                        margin-bottom: 1rem
+
+// blog
+#blog
+    .blogs
+        font-size: 0
+        .blog-middle
+            margin: 0 5%
+            @media (max-width: 770px)
+                margin-right: 0
+            @media (max-width: 550px)
+                margin: 0
+        .blog-container
+            display: inline-block
+            width: 30%
+            text-align: left
+            position: relative
+            @media (max-width: 770px)
+                width: 45%
+            @media (max-width: 550px)
+                width: 100%
+            .image-container
+                img
+                    width: 100%
+                .date
+                    position: absolute
+                    bottom: 12.5rem
+                    left: -1rem
+                    padding: 1.5rem
+                    background: $secondary-color
+                    color: white
+                    text-align: center
+                    b
+                        display: block
+                        margin-bottom: 0.5rem
+                        font-size: $font-30
+                        font-family: $montserrat
+                    i
+                        font-family: $roboto
+                        font-size: 15px
+            .blog-title
+                font-family: $montserrat
+                font-size: $font-14
+                color: $color-dark
+                margin: 1rem 0
+                display: block
+            p
+                color: $color-light
+                font-size: $font-15
+                font-family: $roboto
+
+// map
+#map
+    background: url('../images/people-bg.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    .section-container
+        h1
+            color: $primary-color
+            margin-top: 1rem
+        .seperate-span
+            margin: 2rem auto 0 auto
+
+// footer
+footer
+    .section-container
+        position: relative
+        .footer-left, .footer-middle, .footer-right
+            vertical-align: top
+            display: inline-block
+            text-align: left
+        .footer-left
+            width: 35%
+            h1
+                font-size: 4.6rem
+                font-family: $montserrat
+                color: #cccccc
+                margin-bottom: 4rem
+            .footer-desc
+                font-size: $font-15
+                color: $color-light
+                font-family: $roboto
+            .followers
+                font-size: $font-14
+                font-family: $montserrat
+                display: block
+                color: $color-dark
+                margin-top: 4rem
+                margin-bottom: 2rem
+                padding-bottom: 2rem
+                border-bottom: 1px solid $color-light
+                b
+                    color: $color-dark
+                    font-family: $montserrat
+                    font-size: $font-18
+            .follow-us
+                margin-bottom: 2rem
+                .follow-text
+                    font-size: $font-15
+                    font-family: $roboto
+                    color: $color-light
+                .fab
+                    margin: 0 0.5rem
+                    font-size: 1.8rem
+                    color: $secondary-color
+            form
+                font-size: 0
+                input
+                    padding: 1rem
+                    @media (max-width: 330px)
+                        width: 100%
+                input[type='submit']
+                    font-weight: bold
+                    color: white
+                    background: $secondary-color
+                    border: 3px solid $secondary-color
+                input[type='text']
+                    font-style: italic
+                    border: 1px solid $color-light
+                    border-right: 0
+                    @media (max-width: 330px)
+                        border-right: 1px solid $color-light
+                        margin-bottom: 1rem
+                        
+        .footer-middle
+            width: 30%
+            margin: 0 4%
+            .footer-title
+                font-size: $font-14
+                color: $color-dark
+                font-family: $montserrat
+                margin-bottom: 4.5rem
+                display: block
+            .blog
+                img
+                    display: inline-block
+                    width: 35%
+                div
+                    vertical-align: top
+                    display: inline-block
+                    width: 60%
+                    margin-left: 1rem
+                    padding: 0.5rem
+                    span
+                        display: block
+                        font-size: 12px
+                        font-family: $montserrat
+                        color: $color-dark
+                    i
+                        font-size: 13px
+                        font-family: $roboto
+                        color: $color-light
+            .middle-blog
+                margin: 2rem 0
+        .footer-right
+            font-size: 0
+            width: 25%
+            .footer-title
+                font-size: $font-14
+                color: $color-dark
+                font-family: $montserrat
+                margin-bottom: 4.5rem
+                display: block
+            i
+                font-size: 13px
+                font-family: $roboto
+                color: $color-dark
+                margin-top: 1rem
+                display: block
+            .footer-gallery
+                img
+                    width: 33%
+        .footer-bottom
+            left: 20px
+            position: absolute
+            bottom: 0
+            border-top: 1px solid $color-light
+            padding: 1rem
+            width: calc( 100% - 40px )
+            font-size: $font-14
+            font-family: $montserrat
+            span
+                color: $primary-color
+    .section-container
+        .footer-left
+            @media (max-width: 880px)
+                display: block
+                width: 100%
+                margin-bottom: 3rem
+        .footer-middle, .footer-right
+            @media (max-width: 880px)
+                width: 45%
+                margin: 0
+                margin-bottom: 3rem
+            @media (max-width: 600px)
+                display: block
+                width: 100%
