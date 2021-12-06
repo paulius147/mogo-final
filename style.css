@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat&family=Roboto&display=swap");
 * {
   margin: 0;
@@ -584,31 +585,33 @@ header .header-container .header-bottom .outer-container:hover .nav-hover-contai
 
 details > summary::after {
   position: absolute;
-  content: '+';
+  content: '⯆';
   right: 20px;
+  color: #cccccc;
 }
 
 details[open] > summary::after {
   position: absolute;
-  content: "-";
+  content: '⯅';
   right: 20px;
+  top: 1.5rem;
 }
 
 details > summary::-webkit-details-marker {
   display: none;
 }
 
-::-webkit-scrollbar {
+.faq-content::-webkit-scrollbar {
   width: 5px;
 }
 
-::-webkit-scrollbar-track {
+.faq-content::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 5px #d4d4d4;
           box-shadow: inset 0 0 5px #d4d4d4;
   border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb {
+.faq-content::-webkit-scrollbar-thumb {
   background: #95e1d3;
 }
 
@@ -1062,6 +1065,7 @@ details > summary::-webkit-details-marker {
 @media (max-width: 770px) {
   #blog .blogs .blog-container {
     width: 45%;
+    margin-bottom: 3rem;
   }
 }
 
@@ -1071,13 +1075,27 @@ details > summary::-webkit-details-marker {
   }
 }
 
+#blog .blogs .blog-container .comments-seen {
+  font-size: 15px;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 2rem;
+}
+
+#blog .blogs .blog-container .comments-seen span {
+  margin-right: 1rem;
+}
+
+#blog .blogs .blog-container .comments-seen i {
+  color: #95e1d3;
+}
+
 #blog .blogs .blog-container .image-container img {
   width: 100%;
 }
 
 #blog .blogs .blog-container .image-container .date {
   position: absolute;
-  bottom: 12.5rem;
+  bottom: 17.5rem;
   left: -1rem;
   padding: 1.5rem;
   background: #95e1d3;
